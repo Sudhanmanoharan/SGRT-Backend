@@ -1,8 +1,15 @@
+// const mailAuth = {
+//     "mailId": 'sgrt.iitm@gmail.com',
+//     "pasword": 'kuterlnouxiqoatl',
+//     "service_provider": 'gmail',
+//     'from_mail_id': 'sgrt.iitm@gmail.com'
+// };
+
 const mailAuth = {
-    "mailId": 'sgrt.iitm@gmail.com',
-    "pasword": 'kuterlnouxiqoatl',
+    "mailId": 'sudhanmanoharan@gmail.com',
+    "pasword": 'fhsopggcdderykdt',
     "service_provider": 'gmail',
-    'from_mail_id': 'sgrt.iitm@gmail.com'
+    'from_mail_id': 'sudhanmanoharan@gmail.com'
 };
 
 const portNumber = {
