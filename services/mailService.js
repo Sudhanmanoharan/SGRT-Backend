@@ -1,7 +1,9 @@
 const nodemailer = require('nodemailer');
 const auth = require('../config/auth');
+const hbs = require('nodemailer-express-handlebars')
+const path = require('path');
 
-function sendMail(htmlDetails) {
+function sendMail(context, type) {
 
     return new Promise((resolve, reject) => {
         const resData = {};
@@ -13,12 +15,36 @@ function sendMail(htmlDetails) {
             }
         });
 
-        let mailOptions = {
+        var mailOptions = {}
+
+        // point to the template folder
+        const handlebarOptions = {
+            viewEngine: {
+                partialsDir: path.resolve('./views/'),
+                defaultLayout: false,
+                extName: '.handlebars',
+
+            },
+            viewPath: path.resolve('./views/'),
+            extName: '.handlebars',
+        };
+
+        // use a template file with nodemailer
+        transporter.use('compile', hbs(handlebarOptions))
+
+        mailOptions = {
             from: auth.mail.from_mail_id,
             to: auth.mail.from_mail_id,
             subject: 'New Query',
-            html: htmlDetails
+            template: 'email',
+            context: context
         };
+
+        if (context.idUpload) {
+            mailOptions.attachments = [
+                { filename: `${new Date().getTime()}.png`, path: context.idUpload }
+            ]
+        }
 
         transporter.sendMail(mailOptions, function (error, info) {
             if (error) {

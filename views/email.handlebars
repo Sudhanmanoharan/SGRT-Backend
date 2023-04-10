@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>SGRT</title>
+</head>
+
+<body>
+
+  <div style="width: 550px; margin: auto;">
+    <div style="text-align: center !important; background-color: #0e122c; height: 40px;">
+      <p style="color: white; position: relative; padding: 6px; font-size: 18px;">SGRT</p>
+    </div>
+    <div style="border: 1px gray solid;">
+      <table>
+        {{#if name}}
+        <tr id="name">
+          <th style="text-align: start; padding-left: 20px !important; width: 35%;">Name</th>
+          <td style="width: 65%;">{{name}}</td>
+        </tr>
+        {{/if}}
+        {{#if phone}}
+        <tr id="phone">
+          <th style="text-align: start; padding-left: 20px !important; width: 35%;">Mobile Number</th>
+          <td style="width: 65%;">{{phone}}</td>
+        </tr>
+        {{/if}}
+        {{#if email}}
+        <tr id="email">
+          <th style="text-align: start; padding-left: 20px !important; width: 35%;">Email</th>
+          <td style="width: 65%;">{{email}}</td>
+        </tr>
+        {{/if}}
+        {{#if institution}}
+        <tr id="institution">
+          <th style="text-align: start; padding-left: 20px !important; width: 35%;">Institution</th>
+          <td style="width: 65%;">{{institution}}</td>
+        </tr>
+        {{/if}}
+        {{#if department}}
+        <tr id="department">
+          <th style="text-align: start; padding-left: 20px !important; width: 35%;">Department</th>
+          <td style="width: 65%;">{{department}}</td>
+        </tr>
+        {{/if}}
+        {{#if year}}
+        <tr id="year">
+          <th style="text-align: start; padding-left: 20px !important; width: 35%;">Year</th>
+          <td style="width: 65%;">{{year}}</td>
+        </tr>
+        {{/if}}
+        {{#if interestedTopic}}
+        <tr id="interestedTopic">
+          <th style="text-align: start; padding-left: 20px !important; width: 35%;">Interested Topic</th>
+          <td style="width: 65%;">{{interestedTopic}}</td>
+        </tr>
+        {{/if}}
+        {{#if requirement}}
+        <tr id="requirement">
+          <th style="text-align: start; padding-left: 20px !important; width: 35%;">Requirement</th>
+          <td style="width: 65%;">{{requirement}}</td>
+        </tr>
+        {{/if}}
+        {{#if researchTopic}}
+        <tr id="researchTopic">
+          <th style="text-align: start; padding-left: 20px !important; width: 35%;">Research Topic</th>
+          <td style="width: 65%;">{{researchTopic}}</td>
+        </tr>
+        {{/if}}
+      </table>
+    </div>
+  </div>
+
+</body>
+
+</html>
