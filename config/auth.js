@@ -1,6 +1,6 @@
 const mailAuth = {
     "mailId": 'sgrt.iitm@gmail.com',
-    "pasword": 'kuterlnouxiqoatl',
+    "pasword": 'muobpzdlvqvegkqt',
     "service_provider": 'gmail',
     'from_mail_id': 'sgrt.iitm@gmail.com'
 };
