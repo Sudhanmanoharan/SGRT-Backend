@@ -33,6 +33,12 @@
           <td style="width: 65%;">{{email}}</td>
         </tr>
         {{/if}}
+        {{#if message}}
+        <tr id="message">
+          <th style="text-align: start; padding-left: 20px !important; width: 35%;">Message</th>
+          <td style="width: 65%;">{{message}}</td>
+        </tr>
+        {{/if}}
         {{#if institution}}
         <tr id="institution">
           <th style="text-align: start; padding-left: 20px !important; width: 35%;">Institution</th>
