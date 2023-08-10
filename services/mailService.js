@@ -35,7 +35,7 @@ function sendMail(context, type) {
         mailOptions = {
             from: auth.mail.from_mail_id,
             to: auth.mail.from_mail_id,
-            subject: 'New Query',
+            subject: context.category,
             template: 'email',
             context: context
         };

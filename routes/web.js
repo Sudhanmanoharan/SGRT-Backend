@@ -42,7 +42,8 @@ router.post("/details-query", (req, res) => {
             idUpload: req.body.idUpload,
             interestedTopic: req.body.interestedTopic,
             requirement: req.body.requirement,
-            researchTopic: req.body.researchTopic
+            researchTopic: req.body.researchTopic,
+            category : req.body.category
         };
 
         emailService.mail(context, 'details-query').then((mailRes) => {
